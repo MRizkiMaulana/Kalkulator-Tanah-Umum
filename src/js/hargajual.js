@@ -101,10 +101,6 @@ document
           style: "currency",
           currency: "IDR",
         })}</p>
-        <p>Nilai Perolehan Tanah: ${totalHargaJual.toLocaleString("id-ID", {
-          style: "currency",
-          currency: "IDR",
-        })}</p>
         `;
 
     if (hitungType === "hitung-ajb") {
