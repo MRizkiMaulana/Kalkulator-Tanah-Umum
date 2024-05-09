@@ -107,7 +107,7 @@ document
     // Menampilkan hasil sesuai pilihan hitung
     var hasilElem = document.getElementById("hasil");
     hasilElem.innerHTML = `
-        <br><br><br><h2>Rencana Anggaran Biaya Pembuatan Surat Tanah</h2><br> 
+        <br><br><h2 style="text-align: center;">Rencana Anggaran Biaya Pembuatan Surat Tanah</h2> 
         <p>Nama Penjual: ${namapenjual}</p>
         <p>Nama Pembeli: ${namapembeli}</p>
         <p>Alamat: ${alamat}</p>
@@ -127,10 +127,14 @@ document
           style: "currency",
           currency: "IDR",
         })}</p>
-        <p>Total Harga Jual: ${totalHargaJual.toLocaleString("id-ID", {
-          style: "currency",
-          currency: "IDR",
-        })}</p>
+        ${
+          hargaBangunan > 0
+            ? `<p>Total Harga Jual: ${totalHargaJual.toLocaleString("id-ID", {
+                style: "currency",
+                currency: "IDR",
+              })}</p>`
+            : ""
+        }
         <p>Harga Bangunan: ${njopBangunan.toLocaleString("id-ID", {
           style: "currency",
           currency: "IDR",
