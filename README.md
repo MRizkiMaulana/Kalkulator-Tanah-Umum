@@ -19,6 +19,15 @@ Kalkulator Nilai Perolehan Tanah adalah sebuah aplikasi web sederhana yang memun
 - **Perhitungan Otomatis**: Berdasarkan input pengguna, kalkulator akan melakukan perhitungan otomatis dan menampilkan hasilnya.
 - **Cetak Hasil**: Pengguna dapat mencetak hasil perhitungan untuk referensi.
 
+## Teknologi yang Digunakan
+
+- **HTML**: Digunakan untuk membangun struktur dan konten halaman web.
+- **CSS**: Digunakan untuk mengatur tata letak dan gaya visual halaman web.
+- **JavaScript**: Digunakan untuk mengatur logika perhitungan dan interaksi pengguna pada halaman web.
+- **Radio Button dan Form Handling**: Menggunakan elemen radio button dan form handling dalam HTML untuk memungkinkan pengguna memilih metode perhitungan dan mengirimkan data ke JavaScript untuk diproses.
+- **Event Listeners**: Menggunakan event listeners dalam JavaScript untuk menangani aksi pengguna seperti pengiriman formulir dan mencetak hasil.
+- **Print Functionality**: Menambahkan fungsi untuk mencetak hasil perhitungan menggunakan JavaScript dan `window.print()`.
+
 ## Struktur File
 
 - **index.html**: Halaman utama yang memuat pilihan untuk menggunakan kalkulator NJOP atau Manual.
