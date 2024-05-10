@@ -31,6 +31,6 @@ Kalkulator Nilai Perolehan Tanah adalah sebuah aplikasi web sederhana yang memun
 
 ## Demo
 
-Anda dapat melihat demo langsung dari aplikasi ini di [https://mrizkimaulana.github.io/Kalkulator-Tanah-Umum/](#).
+Anda dapat melihat demo langsung dari aplikasi ini di [*](https://mrizkimaulana.github.io/Kalkulator-Tanah-Umum/).
 
 
