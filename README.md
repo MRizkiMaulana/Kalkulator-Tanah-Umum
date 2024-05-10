@@ -1,6 +1,16 @@
-# Kalkulator Nilai Perolehan Tanah Uum
+# Kalkulator Nilai Perolehan Tanah Umum
 
 Kalkulator Nilai Perolehan Tanah adalah sebuah aplikasi web sederhana yang memungkinkan pengguna untuk menghitung nilai perolehan tanah berdasarkan dua metode: NJOP (Nilai Jual Objek Pajak) dan Manual. Aplikasi ini berguna bagi mereka yang membutuhkan perkiraan biaya pembuatan surat tanah.
+
+## Hitung Manual
+
+![image](https://github.com/MRizkiMaulana/Kalkulator-Tanah-Umum/assets/100768439/a008825a-cb6c-4301-abe2-ae25c104afa3)
+
+## Hitung NJOP
+
+![image](https://github.com/MRizkiMaulana/Kalkulator-Tanah-Umum/assets/100768439/36145bea-e2fa-4254-a816-3a49fa77ea36)
+
+
 
 ## Fitur
 
