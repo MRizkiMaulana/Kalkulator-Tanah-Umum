@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Nilai Perolehan Tanah Manual</title>
-    <link rel="icon" href="src/img/kalkulator.ico" type="image/x-icon">
-    <link rel="stylesheet" href="src/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator Manual</title>
+
+<link rel="icon" href="src/img/kalkulator.ico">
+<link rel="stylesheet" href="src/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Kalkulator Nilai Perolehan Tanah Manual</h1>
-        <form id="nilaiPerolehanTanahForm">
-            <label for="namapenjual">Nama Penjual:</label>
-            <input type="text" id="namapenjual" required>
-            
-            <label for="namapembeli">Nama Pembeli:</label>
-            <input type="text" id="namapembeli" required>
-            
-            <label for="alamat">Alamat:</label>
-            <input type="text" id="alamat" required>
-            
-            <label for="alamattanah">Alamat Tanah:</label>
-            <input type="text" id="alamattanah" required>
-            
-            <label for="nonopsppt">Nomor NOP SPPT:</label>
-            <input type="text" id="nonopsppt" required>
 
-            <label for="hargaJual">Harga Jual:</label>
-            <input type="number" id="hargaJual" required>
-            
-            <label for="luasTanah">Luas Tanah (m<sup>2</sup>):</label>
-            <input type="number" id="luasTanah" required>            
+<div class="container">
+  <div class="header">
+    <h1>Kalkulator Tanah Manual</h1>
+    <p>Perhitungan berdasarkan harga jual</p>
+  </div>
 
-            <label for="hitungType">Pilih Hitung:</label><br><br>
-            <input type="radio" id="hitungAjb" name="hitungType" value="hitung-ajb" checked>
-            <label for="hitungAjb">Hitung AJB</label><br>
-            <input type="radio" id="hitungSegel" name="hitungType" value="hitung-segel">
-            <label for="hitungSegel">Hitung Segel</label><br>
-            
-            <button type="submit">Hitung</button><br>
-            <button onclick="printResult()">Cetak Hasil</button>
-            <p>Hitung Menggunakan NJOP, klik <a href="animasi1.html">di sini</a>.</p>
-        </form>
-        <div id="hasil"></div>
-    </div>
-    <script src="src/js/nonjop.js"></script>
-    <script>
+<form id="nilaiPerolehanTanahForm">
+<input type="text" id="namapenjual" placeholder="Nama Penjual" required>
+<input type="text" id="namapembeli" placeholder="Nama Pembeli" required>
+<input type="text" id="alamat" placeholder="Alamat" required>
+<input type="text" id="alamattanah" placeholder="Alamat Tanah" required>
+<input type="text" id="nonopsppt" placeholder="NOP SPPT" required>
+
+<input type="number" id="hargaJual" placeholder="Harga Jual" required>
+<input type="number" id="luasTanah" placeholder="Luas Tanah (m2)" required>
+
+<br>
+<input type="radio" name="hitungType" value="hitung-ajb" checked> AJB
+<input type="radio" name="hitungType" value="hitung-segel"> Segel
+
+<button type="submit">Hitung</button>
+<button type="button" onclick="printResult()">Cetak</button>
+
+<p>Gunakan NJOP → <a href="animasi1.html">klik di sini</a></p>
+</form>
+
+<div id="hasil"></div>
+
+<div class="footer">© Kalkulator Tanah</div>
+</div>
+
+<script src="src/js/nonjop.js"></script>
+
+<script>
+function formatRupiah(angka) {
+    return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0
+    }).format(angka || 0);
+}
         function printResult() {
             var namapenjual = document.getElementById("namapenjual").value;
             var namapembeli = document.getElementById("namapembeli").value;
@@ -54,9 +61,10 @@
     
             var popupWin = window.open('', '_blank', 'width=600,height=600');
             popupWin.document.open();
-            popupWin.document.write('<html><head><title>Hasil Non NJOP ' + jenisPerhitungan + ' antara ' + namapenjual + ' dan ' + namapembeli + '</title><style>body { font-family: Arial, sans-serif; } h2 { margin-bottom: 20px; } p { margin-bottom: 10px; }</style></head><body onload="window.print()">' + hasilElem + '</body></html>');
+            popupWin.document.write('<html><head><title>Hasil manual ' + jenisPerhitungan + ' antara ' + namapenjual + ' dan ' + namapembeli + '</title><style>body { font-family: Arial, sans-serif; } h2 { margin-bottom: 20px; } p { margin-bottom: 10px; }</style></head><body onload="window.print()">' + hasilElem + '</body></html>');
             popupWin.document.close();
-        }
-    </script>
+}
+</script>
+
 </body>
 </html>
